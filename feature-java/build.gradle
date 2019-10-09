@@ -1,0 +1,8 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api project(':common')
+
+    api project(':annotations')
+    annotationProcessor project(':processors')
+}
