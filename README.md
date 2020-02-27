@@ -7,7 +7,7 @@ This means that annotation processors which scan the classpath (e.g. using `Elem
 ## ABI-compatible classpath change
 Adds a new private method to an existing public class.
 
-### Gradle (does not re-run)
+### Gradle (not re-run)
 1) `git clean -xdf`
 2) `./gradlew feature-java:assemble --no-build-cache --console=plain`
 
@@ -63,7 +63,7 @@ Adds a new private method to an existing public class.
     8 actionable tasks: 1 executed, 7 up-to-date
     ```
 
-### Kapt
+### Kapt (not re-run)
 1) `git clean -xdf`
 2) `./gradlew feature-kotlin:assemble --no-build-cache --console=plain`
 
@@ -135,7 +135,7 @@ Adds a new private method to an existing public class.
 ## ABI-incompatible classpath change
 Adds a new public class.
 
-### Gradle
+### Gradle (re-run)
 1) `git clean -xdf`
 2) `./gradlew feature-java:assemble --no-build-cache --console=plain`
 
@@ -198,7 +198,7 @@ Adds a new public class.
     8 actionable tasks: 2 executed, 6 up-to-date
     ```
     
-### Kapt
+### Kapt (not re-run)
 1) `git clean -xdf`
 2) `./gradlew feature-kotlin:assemble --no-build-cache --console=plain`
 
